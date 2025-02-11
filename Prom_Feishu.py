@@ -94,7 +94,8 @@ class Grafana_Data:
                 timestamp = int(time.time())
                 filename = f"alert_{self.panel_id}_{timestamp}.png"
                 # 构建完整路径
-                self.out_path = os.path.join(os.path.dirname(self.base_path), filename)
+                #self.out_path = os.path.join(os.path.dirname(self.base_path), filename)
+                self.out_path = os.path.join(self.base_path, filename)
 
                 render_url = (
                     f"{self.address}/render/d-solo/{self.dashboard_id}/?orgId=1&panelId={self.panel_id}&width=1000&height=500"
